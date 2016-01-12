@@ -53,7 +53,7 @@ build/
 
 test/cordova/AdTest
 node_modules
-src
 repos
+srcs
 
 dist/cpp
