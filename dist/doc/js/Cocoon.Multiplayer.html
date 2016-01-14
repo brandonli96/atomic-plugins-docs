@@ -153,6 +153,12 @@
 						
 						<li>
 							
+								<a href="Cocoon.Multiplayer.LoopbackService.html">LoopbackService</a>
+							
+						</li>
+						
+						<li>
+							
 								<a href="Cocoon.Notification.html">Notification</a>
 							
 						</li>
@@ -326,6 +332,9 @@
         
             <dt><a href="namespaces.html#Cocoon.Multiplayer.GooglePlayGames"><a href="Cocoon.Multiplayer.GooglePlayGames.html">GooglePlayGames</a></a></dt>
             <dd></dd>
+        
+            <dt><a href="namespaces.html#Cocoon.Multiplayer.LoopbackService"><a href="Cocoon.Multiplayer.LoopbackService.html">LoopbackService</a></a></dt>
+            <dd></dd>
         </dl>
     
 
@@ -333,6 +342,85 @@
 
     
 
+    
+        <h3 class="subsection-title">Events</h3>
+
+        <dl>
+            
+<dt>
+    <h4 class="name" id="event:On invitation">On invitation</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Triggered when an invitation is received and loaded. This listener should be setup first thing even before the init is called.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">multiplayerService.on("invitation", {
+  received: function() {
+      console.log("Invitation received");
+  },
+  loaded: function(match, error) {
+      console.log("Invitation ready: (Error: + " + JSON.stringify(error) + ")");
+  }
+});</pre>
+
+
+    
+</dd>
+
+        </dl>
     
 
     

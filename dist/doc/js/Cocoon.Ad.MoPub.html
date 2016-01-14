@@ -153,6 +153,12 @@
 						
 						<li>
 							
+								<a href="Cocoon.Multiplayer.LoopbackService.html">LoopbackService</a>
+							
+						</li>
+						
+						<li>
+							
 								<a href="Cocoon.Notification.html">Notification</a>
 							
 						</li>
@@ -298,6 +304,29 @@
 
     
 </dl>
+
+
+        
+            <h3>Example</h3>
+            
+    <pre class="sunlight-highlight-javascript">//Global configuration
+Cocoon.Ads.MoPub.configure({
+    banner:"xxx",
+    interstitial:"yyy"
+})
+//Or platform specific configuration
+Cocoon.Ads.MoPub.configure({
+    ios: {
+         banner:"aaa",
+         bannerIpad:"bbb", //optional
+         interstitial:"ccc",
+         interstitialIpad:"ddd", //optional
+    },
+    android: {
+         banner:"eee",
+         interstitial:"fff"
+    }
+);*</pre>
 
 
         
