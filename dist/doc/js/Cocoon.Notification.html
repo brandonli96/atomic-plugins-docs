@@ -340,6 +340,7 @@ function sendNotification() {
     contentBody : "",
     contentTitle : "",
     date : new Date().valueOf() + 1000
+    icon : "myicon"
    };
 
    Cocoon.Notification.Local.send(notification);
@@ -2205,6 +2206,29 @@ Cocoon.Notification.Parse.on("notification", function(data) {
             
 
             <td class="description last"><p>Time in millisecs from 1970 when the notification will be fired. By default, it will be 1 second (1000).</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>icon</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>(Optional) (Android only) Name of the custom icon that you have bundled in the application as a resource (You will need a custom Cordova plugin to bundle resources in the app). In Android is the icon name without extension.</p></td>
         </tr>
 
 	
