@@ -254,95 +254,59 @@
 	<div class="row-fluid">
 
 		
-		<div class="span8">
-			
+			<div class="span12">
+				
 				<div id="main">
 					
 
 
-	<h1 class="page-title">Namespace: Widget</h1>
-<section>
+		<h1 class="page-title">Source: cocoon_ads_heyzap.js</h1>
+    
+    <section>
+        <article>
+            <pre class="sunlight-highlight-javascript linenums">(function() {
+   	/**
+    * Cocoon.Ad.Heyzap class provides an easy to use Heyzap API with built-in support for multiple banners and interstitials.
+    * @namespace Cocoon.Ad.Heyzap
+    * @example
+    * //Global configuration
+    *Cocoon.Ads.Heyzap.configure({
+    *     publisherId:"xxxxxxxxxxxxxxxx"
+    *})
+    * //Or platform specific configuration
+    *Cocoon.Ads.Heyzap.configure({
+    *     ios: {
+    *          publisherId:"xxxxxxxxxxxxxxxx"
+    *     },
+    *     android: {
+    *          publisherId:"yyyyyyyyyyyyyyyy"
+    *     }
+    *);*
+    */
+    Cocoon.define("Cocoon.Ad", function(extension) {
 
-<header>
-    <h2>
-        <span class="ancestors"><a href="Cocoon.html">Cocoon</a>.</span>
-    
+        extension.Heyzap = new Cocoon.Ad.AdService("LDHeyzapPlugin");
 
-    
-        Widget
-    
-    </h2>
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-
-    
-        
-            <div class="description"><p>This namespace holds the WebDialog widget, which essentially shows a Webview on top of the Cocoon layer.</p></div>
-        
-
-        
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
+        /**
+        * Shows a native view to help debug the Heyzap mediation settings
+        * @memberOf Cocoon.Ad.Heyzap
+        * @function showDebug
+        * @example
+        * Cocoon.Ad.Heyzap.showDebug();
+        */
+        extension.Heyzap.showDebug = function() {
+            Cocoon.exec(this.serviceName, "showDebug", []);
+        };
 
 
-        
-    
-    </div>
+        return extension;
+    });
 
-    
+})();
+</pre>
+        </article>
+    </section>
 
-    
-
-    
-
-    
-        <h3 class="subsection-title">Classes</h3>
-
-        <dl>
-            <dt><a href="Cocoon.Widget.WebDialog.html">WebDialog</a></dt>
-            <dd></dd>
-        </dl>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
 
 
 
@@ -361,10 +325,6 @@
 				</footer>
 			</div>
 
-			
-			<div class="span3">
-				<div id="toc"></div>
-			</div>
 			
 			<br clear="both">
 		</div>
